@@ -23,6 +23,7 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 | `++=`    | [append](#sbt-key-appends)
 | `~=`     | [transform](#sbt-key-transform)
 | `<<=`    | [compute](#sbt-key-compute)
+| `<++=`   | [compute values then append](#sbt-key-compute-then-append)
 
 --
 --
@@ -95,8 +96,19 @@ sourceDirectories in Compile ++= Seq(file("sources1"), file("sources2"))
 name ~= { _.toUpperCase }
 ```
 
-#### <a id="sbt-key-compute"/> `<<=` compute key value
+#### <a id="sbt-key-compute"/> `<<=` compute new key value
 
 ```scala
 name <<= (name, organization, version) { (n, o, v) => "project " + n + " from " + o + " version " + v }
+```
+
+#### <a id="sbt-key-compute-then-append"/> `<++=` compute values then append to key
+
+```scala
+// val watchSources: TaskKey[Seq[File]] = // ...
+watchSources in ConfigGlobal <++= unmanagedSources
+```
+This is the same thing as:
+```scala
+watchSources in ConfigGlobal ++= unmanagedSources.value
 ```
