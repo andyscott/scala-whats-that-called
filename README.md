@@ -16,13 +16,13 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 
 ### SBT Keys
 
-| Operator                     | What??  
-|------------------------------|-------------------------
-| [`:=`](#sbt-key-assign)      | assign
-| [`+=`](#sbt-key-appends)     | append
-| [`++=`](#sbt-key-appends)    | append
-| [`~=`](#sbt-key-transform)   | transform
-| [`<<=`](#sbt-key-compute)    | compute
+| Operator | What??  
+|----------|-------------------------
+| `:=`     | [assign](#sbt-key-assign)
+| `+=`     | [append](#sbt-key-appends)
+| `++=`    | [append](#sbt-key-appends)
+| `~=`     | [transform](#sbt-key-transform)
+| `<<=`    | [compute](#sbt-key-compute)
 
 --
 --
