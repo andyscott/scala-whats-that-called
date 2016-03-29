@@ -1,6 +1,6 @@
-# What's that op?
+# What's that called?
 
-What's the name of that operator, for Scala.
+What's the name of that operator/symbol/syntax/thing, for Scala.
 
 | Operator   | Name                 |
 |------------|----------------------|
