@@ -2,13 +2,13 @@
 
 What's the name of that operator/symbol/syntax/thing, for Scala.
 
-| Operator   | Name                 |
-|------------|----------------------|
-| `==`       | equals               |
-| `>>=`      | [flat map](#flatmap) |
-| `|@|`      | cinnabon             |
-| `::`       | [cons](#cons)        |
-| `_*`       | vararg expansion     |
+| Operator       | "Official"          | "Colloquial"  
+|----------------|---------------------|---------------
+| `==`           | equals              |               
+| [`>>=`](#bind) | [bind](#bind)       | flatMap
+| `|@|`          | applicative builder | Cinnabon, Macaulay Culkin, home alone, scream, Admiral Ackbar
+| `::`           | [cons](#cons)       |
+| `_*`           | vararg expansion    |
 
 
 ## <a id="cons"/> `::` cons
@@ -20,7 +20,7 @@ val list2 = 1 :: 2 :: 3 :: Nil
 // > list2: List[Int] = List(1, 2, 3)
 ```
 
-## <a id="flatmap"/> `>>=` flatMap
+## <a id="bind"/> `>>=` bind
 
 ```scala
 import cats.std.all._
