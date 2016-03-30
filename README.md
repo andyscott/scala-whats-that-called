@@ -12,7 +12,7 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 | `>>`           | [monad sequence](#monad-sequence)           | followedBy
 | `|@|`          | [applicative builder](#applicative-builder) | [Cinnabon][cinnabon], [Home Alone aka the Macaulay Culkin][home-alone], [Scream][scream], [Admiral Ackbar][admiral-ackbar]
 | `::`           | [cons](#cons)                               |
-| `_*`           | vararg expansion                            |
+| `_*`           | [vararg expansion](#vararg-expansion)       |
 
 
 [cinnabon]: https://en.wikipedia.org/wiki/Cinnabon
@@ -83,6 +83,16 @@ import cats.syntax.flatMap._
 
 List(1, 2, 3) >> { List(2, 2) }
 // > res0: List[Int] = List(2, 2, 2, 2, 2, 2)
+```
+
+#### <a id="vararg-expansion"/> `_*` vararg expansion
+
+```scala
+def foo(args: String*) = args.map(_.length)
+val input = List("hello", "world")
+
+foo(input: _*)
+// > res0: Seq[Int] = List(5, 5)
 ```
 
 --
