@@ -5,14 +5,21 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 
 ### General
 
-| Operator       | "Official"                                  | "Colloquial"  
+| Operator       | "Official"                                  | also known as...
 |----------------|---------------------------------------------|---------------
 | `==`           | equals                                      |               
 | `>>=`          | [monad bind](#monad-bind)                   | flatMap
 | `>>`           | [monad sequence](#monad-sequence)           | followedBy
-| `|@|`          | [applicative builder](#applicative-builder) | Cinnabon, Home Alone aka the Macaulay Culkin, Scream, Admiral Ackbar
+| `|@|`          | [applicative builder](#applicative-builder) | [Cinnabon][cinnabon], [Home Alone aka the Macaulay Culkin][home-alone], [Scream][scream], [Admiral Ackbar][admiral-ackbar]
 | `::`           | [cons](#cons)                               |
 | `_*`           | vararg expansion                            |
+
+
+[cinnabon]: https://en.wikipedia.org/wiki/Cinnabon
+[scream]: https://en.wikipedia.org/wiki/The_Scream
+[home-alone]: https://en.wikipedia.org/wiki/Home_Alone
+[admiral-ackbar]: https://en.wikipedia.org/wiki/Admiral_Ackbar
+
 
 
 ### SBT Keys
