@@ -8,8 +8,9 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 | Operator       | "Official"                                  | "Colloquial"  
 |----------------|---------------------------------------------|---------------
 | `==`           | equals                                      |               
-| [`>>=`](#bind) | [bind](#bind)                               | flatMap
-| `|@|`          | [applicative builder](#applicative-builder) | Cinnabon, Macaulay Culkin, home alone, scream, Admiral Ackbar
+| `>>=`          | [monad bind](#monad-bind)                   | flatMap
+| `>>`           | [monad sequence](#monad-sequence)           | followedBy
+| `|@|`          | [applicative builder](#applicative-builder) | Cinnabon, Home Alone aka the Macaulay Culkin, Scream, Admiral Ackbar
 | `::`           | [cons](#cons)                               |
 | `_*`           | vararg expansion                            |
 
@@ -52,7 +53,7 @@ val list2 = 1 :: 2 :: 3 :: Nil
 // > list2: List[Int] = List(1, 2, 3)
 ```
 
-#### <a id="bind"/> `>>=` bind
+#### <a id="monad-bind"/> `>>=` monad bind
 
 Using Cats:
 ```scala
@@ -61,6 +62,20 @@ import cats.syntax.flatMap._
 
 List(1, 2, 3) >>= { (x: Int) => List(x, x + 1) }
 // > res0: List[Int] = List(1, 2, 2, 3, 3, 4)
+```
+
+#### <a id="monad-sequence"/> `>>=` monad sequence
+
+This is very similar to a monad bind, except the result of the
+first action is discarded.
+
+Using Cats:
+```scala
+import cats.std.all._
+import cats.syntax.flatMap._
+
+List(1, 2, 3) >> { List(2, 2) }
+// > res0: List[Int] = List(2, 2, 2, 2, 2, 2)
 ```
 
 --
