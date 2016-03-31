@@ -5,15 +5,20 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 
 ### General
 
-| Operator       | "Official"                                  | also known as...
-|----------------|---------------------------------------------|---------------
-| `==`           | equals                                      |               
-| `>>=`          | [monad bind](#monad-bind)                   | flatMap
-| `>>`           | [monad sequence](#monad-sequence)           | followedBy
-| `|@|`          | [applicative builder](#applicative-builder) | [Cinnabon][cinnabon], [Home Alone aka the Macaulay Culkin][home-alone], [Scream][scream], [Admiral Ackbar][admiral-ackbar]
-| `::`           | [cons](#cons)                               |
-| `_*`           | [vararg expansion](#vararg-expansion)       |
+| Syntax     | Example                 | Name
+|------------|-------------------------|------------
+| `_*`       | `foo(myValues: _*)`     | [vararg expansion](#vararg-expansion)       |
+| `<:`       | `def fun[A <: B](a: A)` | [lower bound](#scala-bounds)                |
+| `>:`       | `def fun[A >: B](a: A)` | [upper bound](#scala-bounds)                |
+| `<%`       | `def fun[A <% B](a: A)` | [view bound](#scala-bounds)                 |
 
+| Operator       | Example                         | Name                                        | also known as...
+|----------------|---------------------------------|---------------------------------------------|---
+| `==`           | `if (a == b)`                   | equals                                      |               
+| `>>=`          | `list1 >>= fun1`                | [monad bind](#monad-bind)                   | flatMap
+| `>>`           | `list1 >>  fun2`                | [monad sequence](#monad-sequence)           | followedBy
+| `|@|`          | `(Some(3) |@| Some(5)) {_ + _}` | [applicative builder](#applicative-builder) | [Cinnabon][cinnabon], [Home Alone aka the Macaulay Culkin][home-alone], [Scream][scream], [Admiral Ackbar][admiral-ackbar]
+| `::`           | `1 :: 2 :: 3 :: Nil`            | [cons](#cons)                               |
 
 [cinnabon]: https://en.wikipedia.org/wiki/Cinnabon
 [scream]: https://en.wikipedia.org/wiki/The_Scream
@@ -94,6 +99,8 @@ val input = List("hello", "world")
 foo(input: _*)
 // > res0: Seq[Int] = List(5, 5)
 ```
+
+#### <a id="scala-bounds"/> `<:` `>:` `<%` lower/upper/view bounds
 
 --
 --
