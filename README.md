@@ -17,7 +17,7 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 | `==`           | `if (a == b)`                   | equals                                      |               
 | `>>=`          | `list1 >>= fun1`                | [monad bind](#monad-bind)                   | flatMap
 | `>>`           | `list1 >>  fun2`                | [monad sequence](#monad-sequence)           | followedBy
-| `|@|`          | `(Some(3) |@| Some(5)) {_ + _}` | [applicative builder](#applicative-builder) | [Cinnabon][cinnabon], [Home Alone aka the Macaulay Culkin][home-alone], [Scream][scream], [Admiral Ackbar][admiral-ackbar]
+| `|@|`          | `(Some(3) |@| Some(5)) {_ + _}` | [applicative builder](#applicative-builder) | [Cinnabon][cinnabon], [Scream][scream], [Admiral Ackbar][admiral-ackbar],<br/>[Home Alone/Macaulay Culkin][home-alone]
 | `::`           | `1 :: 2 :: 3 :: Nil`            | [cons](#cons)                               |
 
 [cinnabon]: https://en.wikipedia.org/wiki/Cinnabon
