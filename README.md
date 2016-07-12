@@ -8,6 +8,7 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 | Syntax     | Example                 | Name
 |------------|-------------------------|------------
 | `_*`       | `foo(myValues: _*)`     | [vararg expansion](#vararg-expansion)       |
+| `:`        | `def fun[A: Foo](a: A)` | [context bound](#scala-bounds)              |
 | `<:`       | `def fun[A <: B](a: A)` | [lower bound](#scala-bounds)                |
 | `>:`       | `def fun[A >: B](a: A)` | [upper bound](#scala-bounds)                |
 | `<%`       | `def fun[A <% B](a: A)` | [view bound](#scala-bounds)                 |
@@ -100,7 +101,9 @@ foo(input: _*)
 // > res0: Seq[Int] = List(5, 5)
 ```
 
-#### <a id="scala-bounds"/> `<:` `>:` `<%` lower/upper/view bounds
+#### <a id="scala-bounds"/> `:` `<:` `>:` `<%` context/lower/upper/view bounds
+
+TODO
 
 --
 --
