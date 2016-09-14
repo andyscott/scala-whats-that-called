@@ -77,7 +77,7 @@ List(1, 2, 3) >>= { (x: Int) => List(x, x + 1) }
 // > res0: List[Int] = List(1, 2, 2, 3, 3, 4)
 ```
 
-#### <a id="monad-sequence"/> `>>=` monad sequence
+#### <a id="monad-sequence"/> `>>` monad sequence
 
 This is very similar to a monad bind, except the result of the
 first action is discarded.
