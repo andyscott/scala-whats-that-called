@@ -9,8 +9,8 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 |------------|-------------------------|------------
 | `_*`       | `foo(myValues: _*)`     | [vararg expansion](#vararg-expansion)       |
 | `:`        | `def fun[A: Foo](a: A)` | [context bound](#scala-bounds)              |
-| `<:`       | `def fun[A <: B](a: A)` | [lower bound](#scala-bounds)                |
-| `>:`       | `def fun[A >: B](a: A)` | [upper bound](#scala-bounds)                |
+| `<:`       | `def fun[A <: B](a: A)` | [upper bound](#scala-bounds)                |
+| `>:`       | `def fun[A >: B](a: A)` | [lower bound](#scala-bounds)                |
 | `<%`       | `def fun[A <% B](a: A)` | [view bound](#scala-bounds)                 |
 
 | Operator       | Example                         | Name                                        | also known as...
