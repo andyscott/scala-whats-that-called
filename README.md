@@ -49,7 +49,7 @@ What's the name of that operator/symbol/syntax/thing, for Scala.
 Using Cats:
 ```scala
 import cats._
-import cats.std.option._
+import cats.instances.option._
 import cats.syntax.cartesian._
 
 (Option(1) |@| Option(2)) map (_ + _)
@@ -70,7 +70,7 @@ val list2 = 1 :: 2 :: 3 :: Nil
 
 Using Cats:
 ```scala
-import cats.std.all._
+import cats.instances.all._
 import cats.syntax.flatMap._
 
 List(1, 2, 3) >>= { (x: Int) => List(x, x + 1) }
@@ -84,7 +84,7 @@ first action is discarded.
 
 Using Cats:
 ```scala
-import cats.std.all._
+import cats.instances.all._
 import cats.syntax.flatMap._
 
 List(1, 2, 3) >> { List(2, 2) }
